@@ -65,7 +65,7 @@ public:
     imu.linear_acceleration = output.acceleration;
 
     // To indicate no covariance estimate, set the 1st elements of matrice -1
-    imu.orientation_covariance[0] = 0;
+    imu.orientation_covariance[0] = -1;
     std::fill(imu.orientation_covariance.begin() + 1, imu.orientation_covariance.end(), 0.);
     imu.angular_velocity_covariance[0] = 0;
     std::fill(imu.angular_velocity_covariance.begin() + 1, imu.angular_velocity_covariance.end(),
